@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name_prod" translatable="false">Dota Auto Chess Guide</string>
+    <string name="app_name_dev" translatable="false">Dota Auto Chess Guide Dev</string>
+    <string name="title_gide">Гайды</string>
+    <string name="title_tier_list">Тир Лист</string>
+    <string name="title_items">Предметы</string>
+    <string name="title_statistics">Статистика</string>
+
+    <string-array name="heroes_page">
+        <item>TIER</item>
+        <item>COST</item>
+        <item>CLASS</item>
+        <item>SPEC</item>
+    </string-array>
+</resources>

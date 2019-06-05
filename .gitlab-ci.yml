@@ -1,0 +1,54 @@
+image: $CI_IMAGE
+
+cache:
+  paths:
+    - .m2/
+    - .gradle/
+
+variables:
+  ANDROID_COMPILE_SDK: "28"
+  ANDROID_BUILD_TOOLS: "28.0.3"
+  ANDROID_SDK_TOOLS:   "4333796"
+
+
+before_script:
+  - export GRADLE_USER_HOME=$(pwd)/.gradle
+  - chmod +x ./gradlew
+
+stages:
+  - build
+  - test
+  - deploy
+  - prod
+
+#build:
+#  stage: build
+#  script:
+#    - ./gradlew assembleDebug
+#  artifacts:
+#    paths:
+#    - app/build/outputs/
+#  only:
+#    - /^ci-.*$/
+
+#unitTests:
+#  stage: test
+#  script:
+#    - ./gradlew test
+#  only:
+#    - /^ci-.*$/
+
+fabricBeta:
+  stage: deploy
+  script:
+  - fastlane beta
+  only:
+  - develop
+
+#playstoreBeta:
+#  stage: prod
+#  script:
+#  - fastlane playstore_beta
+#  when: manual
+#  only:
+#    - /^ci-.*$/

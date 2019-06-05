@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="connect_timeout_seconds">15</integer>
+    <integer name="read_timeout_seconds">15</integer>
+    <integer name="write_timeout_seconds">15</integer>
+
+    <string name="auth_key">X-Api-Key</string>
+    <string name="apk_version">X-App-Version</string>
+    <string name="client_lang">X-Client-Lang</string>
+</resources>
